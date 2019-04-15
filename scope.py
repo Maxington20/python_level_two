@@ -40,3 +40,16 @@ func(x)
 
 # prints 50
 print(x)
+
+# change global variables. Should usually avoid this
+
+y = 50
+
+print("before call, y is : ",y)
+
+def superfunc():
+    global y
+    y = 1000
+superfunc()
+print(y)
+print("after call, y is : ",y)
